@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Logo City | Home |</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="icon" href="./images/logodemo1.png" style="font-size: 50px;">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;
+background: url('./images/bg.png') no-repeat fixed;
+background-size: cover;
+}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.9;cursor:pointer;}
+.w3-half img:hover{opacity:1;}
+#img{
+  border: green 1.5px solid;
+}
+#team{
+  width:90%; 
+  border-radius: 50%;
+ margin: 15px;
+}
+
+#team1{
+  width:90%; 
+  border-radius: 50%;
+ margin: 15px;
+}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px;background-color:red;">X</a>
+  <div class="w3-container" style="overflow: hidden;">
+<a href="#"><img src="./images/logo.png" class="img-rounded" style="height: 200px; width: 200px; margin-bottom: 5px; border: green 1px solid; margin-top: 20px;"></a>    
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">LOGO'S</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Our Team</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Prices</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding" style="opacity: 0.9;">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span><img src="./images/logo.png" style="max-height: 100px; max-width: 200px; border: green 1.5px solid;"></span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer; background-color: black; opacity: 0.5;" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-top: 90px;margin-left:340px;margin-right:40px;">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo w3-animate-top" id="namee"><b>LOGO CITY</b></h1>
+    <hr style="width:150px;border:4px solid red" class="w3-round">
+    <h1 class="w3-xxxlarge w3-text-red" id="logo"><b>LOGO'S.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="./images/new1.jpg" style="width:80%" id="img" onclick="onClick(this)" alt="Company name demo">
+      <img src="./images/new2.jpg" style="width:80%" id="img" onclick="onClick(this)" alt="tiger claw logo">
+      <img src="./images/new3.jpg" style="width:80%;" id="img" onclick="onClick(this)" alt="Roaster logo">
+      <img src="./images/tree.jpg" style="width:80%" id="img" onclick="onClick(this)" alt="company name logo">
+    </div>
+
+    <div class="w3-half">
+      <img src="./images/new4.jpg" style="width:80%;" id="img" onclick="onClick(this)" alt="Markhor logo">
+      <img src="./images/new5.jpg" style="width:80%;" id="img" onclick="onClick(this)" alt="Tech Company logo example">
+      <img src="./images/new7.jpg" style="width:80%" id="img" onclick="onClick(this)" alt="company name logo">
+      <img src="./images/new8.jpg" style="width:80%" id="img" onclick="onClick(this)" alt="company name logo">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We are a Team of Energetic Software Engineers.Our Goal is to Provide Reliable Services...</p>
+    <p>We provide Services Related to Web Development , Web Design And Logo Designing.</p>
+  </div>
+  
+  <!-- Our Team -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Our Team</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    &nbsp;
+    <p><b>Our Team is Consisted Of Highly Skilled Software Engineers With interest in Web Development , Web Designing And Logo Designing</b>:</p>
+  </div>
+&nbsp;
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale he">
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="./images/pic.jpg" alt="Syed Anwar Ahmed Shah" id="team">
+        <div class="w3-container">
+          <h3>Syed Anwar Ahmed Shah</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+         <p>BS Software Engineering</p>
+          <p style="margin-left:1px;">Mohammad Ali Jinnah University Karachi</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="./images/ismail.png" alt="Ismail Akhtar" id="team">
+        <div class="w3-container">
+          <h3>Ismail Akhtar</h3>
+          <p class="w3-opacity">co-founder & Chief Finance Officer</p>
+          <p>BS Software Engineering</p>
+          
+          <p style="margin-left:1px; margin-top: 28px;">Mohammad Ali Jinnah University Karachi</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="./images/a.wahab1.png" alt="Abdul Wahab" id="team1">
+        <div class="w3-container">
+          <h3>Abdul Wahab</h3>
+          <p class="w3-opacity">co-founder & CTO</p>
+          <p>BS Software Engineering</p>
+          <p style="margin-left:1px; margin-top: 50px;">Mohammad Ali Jinnah University Karachi</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="./images/sikandersent.jpg" alt="Sikander Deen Muhammad" id="team">
+        <div class="w3-container">
+          <h3>Sikander Deen Muhammad</h3>
+          <p class="w3-opacity">co-founder & Chief Designer</p>
+          <p>BS Software Engineering</p>
+          <p style="margin-left:1px;">Mohammad Ali Jinnah University Karachi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Prices.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We Provide Quality Products at Affordable Prices...</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Web Design & Development</li>
+        <li class="w3-padding-16">Single Page web site</li>
+        <li class="w3-padding-16">
+          <h2>$ 5</h2>
+          <span class="w3-opacity">per Page</span>
+        </li>
+        <li class="w3-padding-16">Portfolio</li>
+        <li class="w3-padding-16">
+          <h2>$ 50</h2>
+          <span class="w3-opacity">per Portfolio</span>
+        </li>
+        <li class="w3-padding-16">Web Site Customization</li>
+        <li class="w3-padding-16">
+          <h2>$ 10</h2>
+          <span class="w3-opacity">per Page</span>
+        </li>
+        
+        
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">LOGO Designing</li>
+        <li class="w3-padding-16">Simple Logo</li>
+        <li class="w3-padding-16">
+          <h2>$ 3</h2>
+          <span class="w3-opacity">per Logo</span>
+        </li>
+        <li class="w3-padding-16">Logo with Business Name</li>
+        <li class="w3-padding-16">
+          <h2>$ 5</h2>
+          <span class="w3-opacity">per Logo</span>
+        </li>
+        <li class="w3-padding-16">Logo With Business Name And Tag Line</li>
+        <li class="w3-padding-16">
+          <h2>$ 8</h2>
+          <span class="w3-opacity">per Logo</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Do you want to contact ! &nbsp; Feel Free to contact...</p>
+    <form action="./formhandler.php" target="" method="POST">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" name="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by LOGO CITY @All Rights Reserved</p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+$(function(){
+  $(window).scroll(function(){
+    if ($(document).scrollTop() > 3) {
+      $("#namee").addClass("w3-animate-left");
+    } else {
+      $("#namee").removeClass("w3-animate-left");
+    }
+  });
+});
+$(function(){
+  $(window).scroll(function(){
+    if ($(document).scrollTop() > 50) {
+      $(".img-rounded").addClass("w3-animate-zoom");
+    } else {
+      $(".img-rounded").removeClass("w3-animate-zoom");
+    }
+  });
+});
+$(function(){
+  $(window).scroll(function(){
+    if ($(document).scrollTop() > 50) {
+      $("#logo").addClass("w3-animate-zoom");
+    } else {
+      $("#logo").removeClass("w3-animate-zoom");
+    }
+  });
+});
+
+$(function(){
+  $(window).scroll(function(){
+    if ($(document).scrollTop() > 2000) {
+      $(".he").addClass("w3-animate-left");
+    } else {
+      $(".he").removeClass("w3-animate-left");
+    }
+  });
+});
+
+
+</script>
+
+</body>
+</html>
